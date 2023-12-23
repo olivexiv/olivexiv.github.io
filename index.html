@@ -63,6 +63,32 @@
             cursor: pointer;
         }
     </style>
+
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh; /* Utilisation de 100vh pour occuper la hauteur complète de la fenêtre */
+        }
+
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* Ajustez ceci en fonction du rapport hauteur/largeur de votre vidéo (pour une vidéo 16:9, utilisez 9 / 16 * 100) */
+            width: 100%;
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
     <title>Page de Divertissement</title>
 </head>
 <body>
