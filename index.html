@@ -260,7 +260,7 @@
         // Envoyer la question au service REST du chatbot
         $.ajax({
             type: "POST",
-            url: "http://olivexiv.github.io/chatbot/ask",
+            url: "http://olivexiv.github.io/ChatbotController.java",
             data: JSON.stringify(userQuestion),
             contentType: "application/json",
             success: function (response) {
