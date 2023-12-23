@@ -1,1 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+
+        .videos-container {
+            display: flex;
+            justify-content: space-around;
+            margin: 20px;
+        }
+
+        .video {
+            margin-bottom: 20px;
+        }
+
+        .animation-container {
+            text-align: center;
+        }
+
+        @keyframes exampleAnimation {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+
+        /* Styles pour la popup de citation */
+        .quote-popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #fff;
+            padding: 20px;
+            border: 1px solid #ccc;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            max-width: 400px;
+            text-align: center;
+        }
+
+        .quote-popup button {
+            margin-top: 10px;
+            padding: 8px 16px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+    <title>Page de Divertissement</title>
+</head>
+<body>
+    <div class="header">
+        <h1>Divertissement</h1>
+    </div>
+
+    <div class="videos-container">
+      
+<div class="video">
+            <iframe class="vimeo-video" width="560" height="315" src="https://www.youtube.com/embed/mhJRzQsLZGg" frameborder="0" allowfullscreen></iframe>
+  
+  <iframe class="vimeo-video" width="560" height="315" src="https://www.youtube.com/embed/mNRP1y_IpW4" frameborder="0" allowfullscreen></iframe>
+  
+  <iframe class="vimeo-video" width="560" height="315" src="https://www.youtube.com/embed/OWCh3wmKtak" frameborder="0" allowfullscreen></iframe>
+  
+        </div>
+      
+        <div class="video">
+            <iframe class="youtube-video" width="560" height="315" src="https://www.youtube.com/embed/3LXQWU67Ufk" frameborder="0" allowfullscreen></iframe>
+        </div>
+
+      <div class="video">
+            <iframe class="vimeo-video" width="560" height="315" src="https://www.youtube.com/embed/qcYHKe_J2iA" frameborder="0" allowfullscreen></iframe>
+        </div>
+      
+        <div class="video">
+          <iframe class="vimeo-video" width="560" height="315" src="https://www.youtube.com/embed/gCNeDWCI0vo" frameborder="0" allowfullscreen></iframe>
+
+          
+            <iframe class="vimeo-video" width="560" height="315" src="https://www.youtube.com/embed/QQIXL81-F-c" frameborder="0" allowfullscreen></iframe>
+        </div>
+      
+    </div>
+
+    <div class="animation-container">
+        <button onclick="startAnimation()">Démarrer l'animation</button>
+        <button onclick="showRandomQuote()">Afficher une citation</button>
+    </div>
+
+    <div class="quote-popup" id="quotePopup">
+        <p id="quoteText"></p>
+        <button onclick="closePopup()">Fermer</button>
+    </div>
+
+    <script>
+        function startAnimation() {
+            const animationElement = document.querySelector('.animation-container');
+            animationElement.style.animation = 'exampleAnimation 3s ease-in-out';
+            setTimeout(() => {
+                animationElement.style.animation = '';
+            }, 3000);
+        }
+
+        function showRandomQuote() {
+            const quotes = [
+                "La vie est vraiment simple, mais nous insistons à la rendre compliquée. - Confucius",
+                "Le seul moyen de faire du bon travail est d'aimer ce que vous faites. - Steve Jobs",
+                "La vie sans musique serait une erreur. - Friedrich Nietzsche",
+                // ... ajoutez 17 citations supplémentaires ici ...
+            ];
+
+            const randomIndex = Math.floor(Math.random() * quotes.length);
+            const randomQuote = quotes[randomIndex];
+
+            const quotePopup = document.getElementById('quotePopup');
+            const quoteText = document.getElementById('quoteText');
+            
+            quoteText.innerText = randomQuote;
+            quotePopup.style.display = 'block';
+        }
+
+        function closePopup() {
+            const quotePopup = document.getElementById('quotePopup');
+            quotePopup.style.display = 'none';
+        }
+    </script>
+</body>
+</html>
 
