@@ -27,7 +27,7 @@ Un site web interactif avec des animations et des citations inspirantes.
 
 ## 🤖 Auteur
 
-- [olivexiv.github.io](https://github.com/olivexiv.github.io/)
+- [olivexiv.github.io](https://olivexiv.github.io/)
 
 ## 📝 Licence
 
