@@ -119,7 +119,11 @@
         <iframe class="vimeo-video" width="560" height="315" src="https://www.youtube.com/embed/PxSyELdDwHE" frameborder="0" allowfullscreen></iframe>
       <iframe class="vimeo-video" width="560" height="315" src="" frameborder="0" allowfullscreen></iframe>
     </div>
-
+<div id="chat-container">
+    <div id="chat-history"></div>
+    <input type="text" id="user-input" placeholder="Posez une question...">
+    <button onclick="askChatbot()">Envoyer</button>
+</div>
     <div class="animation-container">
         <button onclick="startAnimation()">Démarrer l'animation</button>
         <button onclick="showRandomQuote()">Afficher une citation</button>
@@ -244,11 +248,7 @@
     </script>
 
 
-<div id="chat-container">
-    <div id="chat-history"></div>
-    <input type="text" id="user-input" placeholder="Posez une question...">
-    <button onclick="askChatbot()">Envoyer</button>
-</div>
+
         
 <script>
     function askChatbot() {
