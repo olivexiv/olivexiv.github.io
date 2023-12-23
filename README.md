@@ -15,8 +15,8 @@ Un site web interactif avec des animations et des citations inspirantes.
 
 ## 🛠️ Installation
 
-1. Clonez le dépôt : `git clone https://github.com/olivexiv/olivexiv.git`
-2. Allez dans le répertoire du projet : `cd votre-projet`
+1. Clonez le dépôt : `git clone https://github.com/olivexiv/olivexiv.github.io.git`
+2. Allez dans le répertoire du projet : `cd olivexiv`
 3. Ouvrez le fichier `index.html` dans votre navigateur.
 
 ## 🚀 Utilisation
