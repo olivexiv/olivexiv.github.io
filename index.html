@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -243,6 +243,38 @@
         }
     </script>
 
+
+<div id="chat-container">
+    <div id="chat-history"></div>
+    <input type="text" id="user-input" placeholder="Posez une question...">
+    <button onclick="askChatbot()">Envoyer</button>
+</div>
+        
+<script>
+    function askChatbot() {
+        var userQuestion = $('#user-input').val();
+
+        // Envoyer la question au service REST du chatbot
+        $.ajax({
+            type: "POST",
+            url: "http://localhost:8080/chatbot/ask",
+            data: JSON.stringify(userQuestion),
+            contentType: "application/json",
+            success: function (response) {
+                // Traitez la réponse du chatbot
+                displayChatMessage("User: " + userQuestion);
+                displayChatMessage("Chatbot: " + response);
+            },
+            error: function (error) {
+                console.error("Erreur lors de la communication avec le chatbot : " + error);
+            }
+        });
+    }
+
+    function displayChatMessage(message) {
+        $('#chat-history').append('<p>' + message + '</p>');
+    }
+</script
      <footer>
         <p>&copy; 2023 <a href="olivexiv.github.io">olivexiv.github.io</a> Live & Divertissement.</p>
     </footer>    
